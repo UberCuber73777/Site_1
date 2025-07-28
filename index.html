@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на мой сайт!</h1>
+    <p>Это простая демонстрационная страница с интерактивными элементами.</p>
+    
+    <button id="firstButton">Показать первую картинку</button>
+    
+    <div id="firstImageContainer" class="hidden">
+        <img src="img1.jpg" alt="Первая картинка">>
+        <button id="secondButton">Показать вторую картинку</button>
+    </div>
+    
+    <div id="secondImageContainer" class="hidden">
+        <img src="img2.jpg" alt="Вторая картинка">
+    </div>
+
+    <script>
+        document.getElementById('firstButton').addEventListener('click', function() {
+            document.getElementById('firstImageContainer').classList.remove('hidden');
+        });
+        
+        document.getElementById('secondButton').addEventListener('click', function() {
+            document.getElementById('secondImageContainer').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
